@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class FrequenceSort {
-    public int[] frequencySort(int[] nums) {
+    public static int[] frequencySort(int[] nums) {
         int []ans=new int[nums.length];
         HashMap<Integer,Integer>hm=new HashMap<>();
         for(int val:nums){
@@ -28,4 +28,15 @@ public class FrequenceSort {
         }
         return ans;
     }
+    public static void main(String[] args) {
+		try (Scanner sc = new Scanner (System.in)) {
+			int n=sc.nextInt();
+			int []arr=new int[n];
+			for(int i=0;i<arr.length;i++) {
+				arr[i]=sc.nextInt();
+			}
+			int []ans=frequencySort(arr);
+			for(int val:ans)System.out.println(val);
+		}
+	}
 }
